@@ -741,6 +741,9 @@ impl<Tab> Tree<Tab> {
         if node.tabs_count() == 0 {
             self.remove_leaf(node_index);
         }
+        if self.nodes.is_empty() {
+            self.nodes.push(Node::Empty);
+        }
         tab
     }
 
